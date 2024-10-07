@@ -1,10 +1,15 @@
-import SparePartCard from "@/components/ui/sparepartcard"
+import Header from "@/components/ui/header";
+import MedicalSparePartsPreview from "@/components/ui/medicalpreview";
+import { getProducts } from "@/lib/data";
 
 
-const halaman = ({products}: {products : any}) => {
+const halaman = async () => {
+  const products = await getProducts();
+
   return (
     <div>
-      <SparePartCard products={products}/>
+      <Header/>
+      <MedicalSparePartsPreview products={products}/>
     </div>
   )
 }

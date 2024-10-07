@@ -1,9 +1,10 @@
 import { prisma } from "@/lib/prisma"
 
-export const getMaintenance = async () => {
+export const getProducts = async () => {
     try {
-        const maintenance = await prisma.maintenance.findMany();
-        return maintenance;
+        const Products = await prisma.products.findMany();
+
+        return Products;  
     } catch (error) {
         throw new Error("gagal fecth data")
     }

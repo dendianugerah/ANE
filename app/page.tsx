@@ -1,48 +1,37 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import SparePartCard from "@/components/ui/sparepartcard"
 import { Heart, Shield, Zap, Star, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import ANEJOS from "@/img/ANEJOS.jpg"
+import Header from "@/components/ui/header"
+import Contact from "@/components/contact/contact"
 
 export default function MedicalDeviceLanding1080p() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-8 lg:px-16 h-20 flex items-center border-b">
-        <Link className="flex items-center justify-center" href="#">
-          <span className="ml-3 text-2xl font-bold">CV Abadi Nusantara Entitas</span>
-        </Link>
-        <nav className="ml-auto flex gap-8">
-          <Link className="text-lg font-medium hover:underline underline-offset-4" href="products">
-            Products
-          </Link>
-          <Link className="text-lg font-medium hover:underline underline-offset-4" href="maintenance">
-            Hopital Manage
-          </Link>
-          <Link className="text-lg font-medium hover:underline underline-offset-4" href="#contact">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <Header/>
+      {/*bg-gradient-to-r from-blue-50 to-indigo-50*/}
       <main className="flex-1">
-        <section className="w-full py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <section className="w-full py-24 lg:py-32 xl:py-48 bg-gray-100">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
-                    Advancing Healthcare Through Innovation
+                    Penyedia Sparepart Segala Jenis Alat Kesehatan
                   </h1>
                   <p className="max-w-[600px] text-xl text-gray-600 dark:text-gray-400">
-                    Discover our cutting-edge medical devices designed to improve patient outcomes and streamline
-                    healthcare delivery.
+                    Pertama di Indonesia, jika anda bingung harus kemana mencari sparepart alat kesehatan, Maka "ANE" adalah solusi
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                  <Button size="lg" className="text-lg px-8 py-6">
-                    Explore Our Products
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+                  <Link href="products">
+                    <Button size="lg" className="text-lg px-8 py-6">
+                      Explore Our Products
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
                   <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                     Request a Demo
                   </Button>
@@ -52,7 +41,7 @@ export default function MedicalDeviceLanding1080p() {
                 alt="Advanced Medical Device"
                 className="mx-auto rounded-xl object-cover object-center"
                 height="600"
-                src="/placeholder.svg"
+                src={ANEJOS}
                 width="800"
               />
             </div>
@@ -99,7 +88,7 @@ export default function MedicalDeviceLanding1080p() {
         <section className="w-full py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
-              Why Choose MediTech Innovations?
+              Why Choose Abadi Nusantara Entitas?
             </h2>
             <div className="grid gap-12 sm:grid-cols-3">
               {[
@@ -138,21 +127,21 @@ export default function MedicalDeviceLanding1080p() {
             <div className="grid gap-8 sm:grid-cols-3">
               {[
                 {
-                  quote: "The SurgAssist 3000 has revolutionized our surgical procedures. It's increased our precision and reduced recovery times for our patients.",
-                  name: "Dr. Jane Smith",
-                  title: "Chief of Surgery",
-                  hospital: "Metro General Hospital",
+                  quote: "Sparepart yang diberikan berkualitas tinggi dan harganya juga masuk akal. Saya selalu merekomendasikan ANE sebagai tempat pencarian sparepart alkes",
+                  name: "Naufal hijri Magriby",
+                  title: "Director",
+                  hospital: "Fania Ersa",
                 },
                 {
-                  quote: "The HealthMonitor Pro has significantly improved our patient care in the ICU. Its real-time alerts have helped us respond faster to critical situations.",
-                  name: "Dr. Michael Johnson",
-                  title: "ICU Director",
-                  hospital: "City Medical Center",
+                  quote: "Salah satu tempat terbaik untuk membeli sparepart adalah ANE. Saya sangat menyukai pelayanannya dan kecepatan pengiriman barang dari ANE.",
+                  name: "Edi Susanto",
+                  title: "Director Labkes",
+                  hospital: "LabKesDa",
                 },
                 {
-                  quote: "The DiagnoScan Ultra has transformed our diagnostic capabilities. We're now able to provide faster and more accurate results to our patients.",
-                  name: "Dr. Emily Chen",
-                  title: "Head of Radiology",
+                  quote: "Mungkin bukan jadi rahasia lagi bahwa ANE adalah tempat pencarian sparepart yang baik. Dengan harga BPJS dan kualitas orisinil, ANE selalu menjadi rekomendasi.",
+                  name: "R. Afif Nur Pramudito",
+                  title: "CEO Siemens",
                   hospital: "Westside Health Institute",
                 },
               ].map((testimonial, index) => (
@@ -168,6 +157,18 @@ export default function MedicalDeviceLanding1080p() {
                   <p className="text-lg text-gray-600">{testimonial.hospital}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+          <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
+            <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
+              Fitur "Hopital Manage"
+            </h2>
+            <div className="text-xl text-gray-600 dark:text-gray-400">
+              <p >
+                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur "Hospital Manage" dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
+              </p>
             </div>
           </div>
         </section>
@@ -203,6 +204,7 @@ export default function MedicalDeviceLanding1080p() {
             </div>
           </div>
         </section>
+        <Contact/>
       </main>
       <footer className="py-8 w-full shrink-0 border-t">
         <div className="container px-8 lg:px-16 mx-auto max-w-7xl">

@@ -41,7 +41,7 @@ model Products {
   name String
   category String
   compatibility String
-  price String
+  price Int
   stock String
   description String
   link String
