@@ -6,6 +6,10 @@ import Link from "next/link"
 import ANEJOS from "@/img/ANEJOS.jpg"
 import Header from "@/components/ui/header"
 import Contact from "@/components/contact/contact"
+import dashboard from "@/img/dashboard.png"
+import oxygenoom202 from "@/img/oxygenoom202.jpg"
+import ecgcable from "@/img/ecgcable.jpg"
+import spo2sensor from "@/img/spo2sensor.jpg"
 
 export default function MedicalDeviceLanding1080p() {
   return (
@@ -28,13 +32,16 @@ export default function MedicalDeviceLanding1080p() {
                 <div className="flex flex-col gap-4 min-[400px]:flex-row">
                   <Link href="products">
                     <Button size="lg" className="text-lg px-8 py-6">
-                      Explore Our Products
+                      Explore Produk Kami
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </Link>
-                  <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                    Request a Demo
-                  </Button>
+                  <Link href="#contact">
+                    <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                        Request a Demo
+                      </Button>
+                  </Link>
+                  
                 </div>
               </div>
               <Image
@@ -52,19 +59,22 @@ export default function MedicalDeviceLanding1080p() {
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
               Beberapa Jasa dan Product
             </h2>
-            <div className="grid gap-12 lg:grid-cols-3">
+            <div className="grid gap-12 lg:grid-cols-3 text-center">
               {[
                 {
-                  title: "HealthMonitor Pro",
-                  description: "Advanced patient monitoring system with real-time data analysis and alerts.",
+                  title: "Oxygen Sensor",
+                  description: "Oxygen sensor OOM 202 cocok digunakan untuk berbagai macam ventilator",
+                  source: oxygenoom202,
                 },
                 {
-                  title: "SurgAssist 3000",
-                  description: "Robotic surgical assistance system for enhanced precision and reduced recovery times.",
+                  title: "ECG for Pasien Monitor",
+                  description: "Kalau kalian mencari kabel ECG untuk pasien monitor, disini tempatnya",
+                  source: ecgcable
                 },
                 {
-                  title: "DiagnoScan Ultra",
-                  description: "High-resolution diagnostic imaging device for accurate and fast results.",
+                  title: "Spo2 Pasien Monitor",
+                  description: "Jangankan kabel ECG, Spo2 juga ada teman. Pokoknya langsung dituku ae",
+                  source: spo2sensor
                 },
               ].map((product, index) => (
                 <div key={index} className="flex flex-col items-center space-y-4 border p-8 rounded-xl">
@@ -72,14 +82,17 @@ export default function MedicalDeviceLanding1080p() {
                     alt={product.title}
                     className="aspect-square overflow-hidden rounded-xl object-cover object-center"
                     height="300"
-                    src="/placeholder.svg"
+                    src={product.source}
                     width="300"
                   />
                   <h3 className="text-2xl font-bold">{product.title}</h3>
                   <p className="text-lg text-gray-600 dark:text-gray-400 text-center">{product.description}</p>
-                  <Button variant="outline" size="lg" className="mt-4">
-                    Learn More
-                  </Button>
+                  <Link href="products">
+                    <Button variant="outline" size="lg" className="mt-4">
+                      Cek Produk
+                    </Button>
+                  </Link>
+                  
                 </div>
               ))}
             </div>
@@ -135,14 +148,14 @@ export default function MedicalDeviceLanding1080p() {
                 {
                   quote: "Salah satu tempat terbaik untuk membeli sparepart adalah ANE. Saya sangat menyukai pelayanannya dan kecepatan pengiriman barang dari ANE.",
                   name: "Edi Susanto",
-                  title: "Director Labkes",
+                  title: "Director",
                   hospital: "LabKesDa",
                 },
                 {
                   quote: "Mungkin bukan jadi rahasia lagi bahwa ANE adalah tempat pencarian sparepart yang baik. Dengan harga BPJS dan kualitas orisinil, ANE selalu menjadi rekomendasi.",
                   name: "R. Afif Nur Pramudito",
-                  title: "CEO Siemens",
-                  hospital: "Westside Health Institute",
+                  title: "CEO",
+                  hospital: "Siemens Healthinners",
                 },
               ].map((testimonial, index) => (
                 <div key={index} className="flex flex-col items-center space-y-4 border p-8 rounded-xl">
@@ -168,37 +181,35 @@ export default function MedicalDeviceLanding1080p() {
             <div className="text-xl text-gray-600 dark:text-gray-400">
               <p >
                 Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur "Hospital Manage" dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
+              <br/><br/>
+              </p>
+              <p className="text-sm text-black">
+                *fitur masih dalam tahap development
               </p>
             </div>
           </div>
         </section>
-        <section id="contact" className="w-full py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-24 lg:py-32">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
-            <div className="flex flex-col items-center space-y-8 text-center">
-              <div className="space-y-4">
-                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-                  Ready to Elevate Your Healthcare Delivery?
-                </h2>
-                <p className="mx-auto max-w-[800px] text-xl text-gray-600 dark:text-gray-400">
-                  Contact us to learn more about our innovative medical devices and how they can benefit your
-                  healthcare facility.
-                </p>
-              </div>
-              <div className="w-full max-w-2xl space-y-4">
-                <form className="flex flex-col space-y-4">
-                  <Input className="text-lg p-6" placeholder="Your Name" type="text" />
-                  <Input className="text-lg p-6" placeholder="Your Email" type="email" />
-                  <Input className="text-lg p-6" placeholder="Your Healthcare Facility" type="text" />
-                  <Button type="submit" size="lg" className="text-lg px-8 py-6">
-                    Request Information
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </form>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  By submitting this form, you agree to our{" "}
-                  <Link className="underline underline-offset-2" href="#">
-                    Terms & Conditions
-                  </Link>
+            <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
+              Jasa Pembuatan Web Untuk Perusahaan Peralatan Kesehatan
+            </h2>
+            <div className="text-xl text-gray-600 dark:text-gray-400">
+              <p >
+                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur "Hospital Manage" dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
+              <br/><br/>
+              </p>
+              <div>
+                <Image
+                  alt="Advanced Medical Device"
+                  className="mx-auto rounded-xl object-cover object-center "
+                  height="1100"
+                  src={dashboard}
+                  width="13000"
+                />
+                <br />
+                <p className="text-center text-sm">
+                  *<span className="underline">Diatas merupakan contoh pembuatan sistem inventaris maintenance peralatan medis</span>
                 </p>
               </div>
             </div>
@@ -210,7 +221,7 @@ export default function MedicalDeviceLanding1080p() {
         <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              © 2023 MediTech Innovations. All rights reserved.
+              © 2024 CV Abadi Nusantara Entitas.
             </p>
             <nav className="sm:ml-auto flex gap-6">
               <Link className="text-sm hover:underline underline-offset-4" href="#">

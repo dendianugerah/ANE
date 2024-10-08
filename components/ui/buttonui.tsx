@@ -1,6 +1,8 @@
-import Link from "next/link"
+"use client";
 
-Link
+import Link from "next/link"
+import { useFormStatus } from "react-dom";
+import { ArrowRight } from "lucide-react"
 
 export const CreateButton = () => {
     return (
@@ -10,3 +12,4 @@ export const CreateButton = () => {
       </Link>
     )
   }
+        
