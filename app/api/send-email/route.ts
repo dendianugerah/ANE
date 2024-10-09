@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server';
-
+import nodemailer from 'nodemailer';
 
 // Fungsi handler POST
 export async function POST(req: Request) {
-
-  const nodemailer = require("nodemailer")
+  
   const { from, to, subject, text } = await req.json();
 
   const transporter = nodemailer.createTransport({
