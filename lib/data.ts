@@ -5,7 +5,7 @@ export const getProducts = async () => {
         const Products = await prisma.products.findMany();
 
         return Products;  
-    } catch (error) {
+    } catch {
         throw new Error("gagal fecth data")
     }
 }

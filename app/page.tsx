@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Heart, Shield, Zap, Star, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -26,7 +25,7 @@ export default function MedicalDeviceLanding1080p() {
                     Penyedia Sparepart Segala Jenis Alat Kesehatan
                   </h1>
                   <p className="max-w-[600px] text-xl text-gray-600 dark:text-gray-400">
-                    Pertama di Indonesia, jika anda bingung harus kemana mencari sparepart alat kesehatan, Maka "ANE" adalah solusi
+                    Pertama di Indonesia, jika anda bingung harus kemana mencari sparepart alat kesehatan, Maka &quot;ANE&quot; adalah solusi
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 min-[400px]:flex-row">
@@ -164,7 +163,7 @@ export default function MedicalDeviceLanding1080p() {
                       <Star key={i} className="w-6 h-6 fill-primary" />
                     ))}
                   </div>
-                  <p className="text-lg text-gray-600 dark:text-gray-400 text-center">"{testimonial.quote}"</p>
+                  <p className="text-lg text-gray-600 dark:text-gray-400 text-center">&quot;{testimonial.quote}&quot;</p>
                   <p className="font-semibold text-xl">{testimonial.name}</p>
                   <p className="text-lg text-gray-600">{testimonial.title}</p>
                   <p className="text-lg text-gray-600">{testimonial.hospital}</p>
@@ -176,11 +175,11 @@ export default function MedicalDeviceLanding1080p() {
         <section className="w-full py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
-              Fitur "Hopital Manage"
+              Fitur &quot;Hopital Manage&quot;
             </h2>
             <div className="text-xl text-gray-600 dark:text-gray-400">
               <p >
-                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur "Hospital Manage" dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
+                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur &quot;Hospital Manage&quot; dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
               <br/><br/>
               </p>
               <p className="text-sm text-black">
@@ -196,7 +195,7 @@ export default function MedicalDeviceLanding1080p() {
             </h2>
             <div className="text-xl text-gray-600 dark:text-gray-400">
               <p >
-                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur "Hospital Manage" dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
+                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur &quot;Hospital Manage&quot; dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
               <br/><br/>
               </p>
               <div>

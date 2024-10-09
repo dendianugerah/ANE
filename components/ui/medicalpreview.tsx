@@ -28,13 +28,13 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
       <h1 className="text-3xl font-bold mb-6">Medical Equipment Spare Parts</h1>
       <p className="text-lg mb-8">
       Telusuri pilihan suku cadang berkualitas tinggi kami untuk berbagai peralatan medis. 
-      Semua suku cadang adalah komponen OEM asli atau setara yang disetujui, pastikan kompatibilitas dan kinerja dengan <span> "</span> 
+      Semua suku cadang adalah komponen OEM asli atau setara yang disetujui, pastikan kompatibilitas dan kinerja dengan <span> &quot;</span> 
       <Link 
       className="text-blue-600 hover:text-purple-600 h-[2px] w-0 group-hover:w-full transition-all relative cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-black before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-300 after:absolute after:bg-black after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]" 
       href="#">
         Contact Us
       </Link>
-      <span>".</span>
+      <span>&quot;.</span>
       </p>
 
       <Tabs defaultValue="all" className="mb-6">
