@@ -3,7 +3,7 @@ import Link from "next/link"
 const Header = () => {
     return(
         <header className="px-8 lg:px-16 h-20 flex items-center border-b">
-        <Link className="flex items-center justify-center" href="#">
+        <Link className="flex items-center justify-center" href="/">
           <span className="ml-3 text-2xl font-bold">CV Abadi Nusantara Entitas</span>
         </Link>
         <nav className="ml-auto flex gap-8">
