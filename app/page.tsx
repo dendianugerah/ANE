@@ -17,39 +17,40 @@ export default function MedicalDeviceLanding1080p() {
       {/*bg-gradient-to-r from-blue-50 to-indigo-50*/}
       <main className="flex-1">
         <section className="w-full py-24 lg:py-32 xl:py-48 bg-gray-100">
-          <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
+          <div className="container px-6 md:px-8 lg:px-16 mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter">
                     Penyedia Sparepart Segala Jenis Alat Kesehatan
                   </h1>
-                  <p className="max-w-[600px] text-xl text-gray-600 dark:text-gray-400">
+                  <p className="max-w-[600px] text-lg sm:text-xl text-gray-600 dark:text-gray-400">
                     Pertama di Indonesia, jika anda bingung harus kemana mencari sparepart alat kesehatan, Maka &quot;ANE&quot; adalah solusi
                   </p>
                 </div>
-                <div className="flex flex-col gap-4 min-[400px]:flex-row">
+                <div className="flex flex-col gap-4 sm:flex-row">
                   <Link href="products">
-                    <Button size="lg" className="text-lg px-8 py-6">
+                    <Button size="lg" className="text-lg px-8 py-4 sm:px-8 sm:py-6">
                       Explore Produk Kami
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </Link>
                   <Link href="#contact">
-                    <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                    <Button size="lg" variant="outline" className="text-lg px-8 py-4 sm:px-8 sm:py-6">
                         Request a Demo
                       </Button>
                   </Link>
-                  
                 </div>
               </div>
-              <Image
-                alt="Advanced Medical Device"
-                className="mx-auto rounded-xl object-cover object-center"
-                height="600"
-                src={ANEJOS}
-                width="800"
-              />
+              <div className="mx-auto">
+                <Image
+                  alt="Advanced Medical Device"
+                  className="rounded-xl object-cover object-center"
+                  height="600"
+                  src={ANEJOS}
+                  width="800"
+                />
+              </div>
             </div>
           </div>
         </section>
