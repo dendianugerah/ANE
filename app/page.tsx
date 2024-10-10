@@ -101,24 +101,24 @@ export default function MedicalDeviceLanding1080p() {
         <section className="w-full py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
-              Why Choose Abadi Nusantara Entitas?
+              Kenapa harus Abadi Nusantara Entitas?
             </h2>
-            <div className="grid gap-12 sm:grid-cols-3">
+            <div className="grid gap-12 sm:grid-cols-3 text-center">
               {[
                 {
                   icon: Shield,
-                  title: "FDA Approved",
-                  description: "All our devices meet rigorous FDA standards for safety and efficacy.",
+                  title: "Terpercaya",
+                  description: "Didasarkan atas kepercayan kepada client, sparepart pasti mantab-mantab.",
                 },
                 {
                   icon: Zap,
-                  title: "Cutting-edge Technology",
-                  description: "We leverage the latest advancements in medical technology for optimal performance.",
+                  title: "Cepat",
+                  description: "Dalam melayani client, cepat tanggap atau respon atau apapun itu jadi salah satu ciri ANE.",
                 },
                 {
                   icon: Heart,
-                  title: "Improved Patient Outcomes",
-                  description: "Our devices are designed to enhance patient care and recovery.",
+                  title: "Selalu ada",
+                  description: "Apapun yang kalian cari di ANE, selalu ada solusinya.",
                 },
               ].map((feature, index) => (
                 <div key={index} className="flex flex-col items-center space-y-4 p-8 rounded-xl bg-white dark:bg-gray-700">

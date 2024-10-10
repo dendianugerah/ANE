@@ -38,7 +38,7 @@ const Contact = () => {
               Siap untuk mendapatkan sparepart kesehatan terbaik?
             </h2>
             <p className="mx-auto max-w-[800px] text-xl text-gray-600 dark:text-gray-400">
-              Kontak kamu untuk mendapatkan lebih banyak inovasi dibidang alat kesehatan dan 
+              Kontak kami untuk mendapatkan lebih banyak inovasi dibidang alat kesehatan dan 
               bagaimana kami bisa memberikan benefit/fasilitas terbaik untuk pelayanan kesehatan anda.
             </p>
           </div>

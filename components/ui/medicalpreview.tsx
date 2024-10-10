@@ -24,9 +24,9 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Medical Equipment Spare Parts</h1>
-      <p className="text-lg mb-8">
+    <div className="container mx-auto px-4 py-6">
+      <h1 className="text-2xl font-bold mb-4 text-center">Medical Equipment Spare Parts</h1>
+      <p className="text-lg mb-6 text-center">
       Telusuri pilihan suku cadang berkualitas tinggi kami untuk berbagai peralatan medis. 
       Semua suku cadang adalah komponen OEM asli atau setara yang disetujui, pastikan kompatibilitas dan kinerja dengan <span> &quot;</span> 
       <Link 
@@ -38,8 +38,8 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
       </p>
 
       <Tabs defaultValue="all" className="mb-6">
-        <div className="flex">
-          <TabsList>
+        <div className="flex justify-center mb-4">
+          <TabsList className="w-full max-w-sm">
             <TabsTrigger value="all">All Parts</TabsTrigger>
             <TabsTrigger value="imaging">Imaging</TabsTrigger>
             <TabsTrigger value="emergency">Emergency</TabsTrigger>
@@ -49,7 +49,7 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
         </div>
         
         <TabsContent value="all">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {products?.length > 0 ? (
               products.map((product:Products) => (
                 <SparePartCard key={product.id} product={product} />
@@ -62,7 +62,7 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
         </TabsContent>
 
         <TabsContent value="imaging">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products.filter(product => product.category === "Imaging Equipment").map((product) => (
               <SparePartCard key={product.id} product={product} />
             ))}
@@ -70,14 +70,14 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
         </TabsContent>
 
         <TabsContent value="emergency">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products.filter(product => product.category === "Emergency Equipment").map((product) => (
               <SparePartCard key={product.id} product={product} />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="respiratory">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products.filter(product => product.category === "Respiratory Equipment").map((product) => (
               <SparePartCard key={product.id} product={product} />
             ))}
@@ -85,7 +85,7 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
         </TabsContent>
 
         <TabsContent value="life support">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products.filter(product => product.category === "Life Support").map((product) => (
               <SparePartCard key={product.id} product={product} />
             ))}
@@ -99,10 +99,10 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
 
 const SparePartCard = ({ product }:{ product: Products}) => {
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
-        <CardTitle>{product.name}</CardTitle>
-        <CardDescription>{product.category}</CardDescription>
+        <CardTitle className="text-lg">{product.name}</CardTitle>
+        <CardDescription className="text-sm text-gray-500">{product.category}</CardDescription>
       </CardHeader>
       <CardContent>
         <Badge variant="secondary" className="mb-2">
@@ -110,15 +110,15 @@ const SparePartCard = ({ product }:{ product: Products}) => {
         </Badge>
         <p className="text-sm mb-4">{product.description}</p>
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold">Rp {product.price.toFixed(2)}</span>
-          <span className="text-sm text-gray-500">
+          <span className="text-lg font-bold">Rp {product.price.toFixed(2)}</span>
+          <span className="text-xs text-gray-500">
             <Package className="inline mr-1 h-4 w-4" />
             {product.stock} in stock
           </span>
         </div>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button variant="outline">
+        <Button variant="outline" className="text-sm">
           {/* <Tool className="mr-2 h-4 w-4" /> */}
           Details
         </Button>
