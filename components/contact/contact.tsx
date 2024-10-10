@@ -35,11 +35,11 @@ const Contact = () => {
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Ready to Elevate Your Healthcare Delivery?
+              Siap untuk mendapatkan sparepart kesehatan terbaik?
             </h2>
             <p className="mx-auto max-w-[800px] text-xl text-gray-600 dark:text-gray-400">
-              Contact us to learn more about our innovative medical devices and how they can benefit your
-              healthcare facility.
+              Kontak kamu untuk mendapatkan lebih banyak inovasi dibidang alat kesehatan dan 
+              bagaimana kami bisa memberikan benefit/fasilitas terbaik untuk pelayanan kesehatan anda.
             </p>
           </div>
           <div className="w-full max-w-2xl space-y-4">
@@ -66,7 +66,7 @@ const Contact = () => {
                 onChange={(e) => setText(e.target.value)}
               />
               <Button type="submit" size="lg" className="text-lg px-8 py-6">
-                Send
+                Kirim
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </form>
