@@ -39,7 +39,7 @@ const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
 
       <Tabs defaultValue="all" className="mb-6">
         <div className="flex justify-center mb-4">
-          <TabsList className="w-full max-w-sm">
+          <TabsList className="w-full max-w-sm px-2">
             <TabsTrigger value="all">All Parts</TabsTrigger>
             <TabsTrigger value="imaging">Imaging</TabsTrigger>
             <TabsTrigger value="emergency">Emergency</TabsTrigger>
