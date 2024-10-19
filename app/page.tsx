@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Heart, Shield, Zap, Star, ArrowRight } from "lucide-react"
 import Image from "next/image"
@@ -9,6 +11,7 @@ import dashboard from "@/img/dashboard.png"
 import oxygenoom202 from "@/img/oxygenoom202.jpg"
 import ecgcable from "@/img/ecgcable.jpg"
 import spo2sensor from "@/img/spo2sensor.jpg"
+import { motion } from "framer-motion"
 
 export default function MedicalDeviceLanding1080p() {
   return (
@@ -54,12 +57,19 @@ export default function MedicalDeviceLanding1080p() {
             </div>
           </div>
         </section>
-        <section id="products" className="w-full py-24 lg:py-32">
+
+        <section 
+        id="products" 
+        className="w-full py-24 lg:py-32" 
+        >
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
               Beberapa Jasa dan Product
             </h2>
-            <div className="grid gap-12 lg:grid-cols-3 text-center">
+            <div 
+            className="grid gap-12 lg:grid-cols-3 text-center"
+            
+            >
               {[
                 {
                   title: "Oxygen Sensor",
@@ -77,7 +87,28 @@ export default function MedicalDeviceLanding1080p() {
                   source: spo2sensor
                 },
               ].map((product, index) => (
-                <div key={index} className="flex flex-col items-center space-y-4 border p-8 rounded-xl">
+                <motion.div 
+                key={index} 
+                className="flex flex-col items-center space-y-4 border p-8 rounded-xl"
+                initial={{
+                  // opacity: 0.6,
+                  // scale:0.6,
+                  y:200
+                }}
+                whileInView={{
+                  // opacity: 1,
+                  // scale: 1,
+                  y:50,
+                  transition:{
+                    type: "spring",
+                    // bounce: 0.4,
+                    duration: 0.55
+                  }
+                }}
+                viewport={{
+                  once: true
+                }}
+                >
                   <Image
                     alt={product.title}
                     className="aspect-square overflow-hidden rounded-xl object-cover object-center"
@@ -92,12 +123,12 @@ export default function MedicalDeviceLanding1080p() {
                       Cek Produk
                     </Button>
                   </Link>
-                  
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </section>
+        </ section>
+        
         <section className="w-full py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
@@ -121,13 +152,34 @@ export default function MedicalDeviceLanding1080p() {
                   description: "Apapun yang kalian cari di ANE, selalu ada solusinya.",
                 },
               ].map((feature, index) => (
-                <div key={index} className="flex flex-col items-center space-y-4 p-8 rounded-xl bg-white dark:bg-gray-700">
+                <motion.div 
+                key={index} 
+                className="flex flex-col items-center space-y-4 p-8 rounded-xl bg-white dark:bg-gray-700"
+                initial={{
+                  // opacity: 0.6,
+                  // scale:0.6,
+                  y:200
+                }}
+                whileInView={{
+                  // opacity: 1,
+                  // scale: 1,
+                  y:50,
+                  transition:{
+                    type: "spring",
+                    // bounce: 0.4,
+                    duration: 0.55
+                  }
+                }}
+                viewport={{
+                  once: true
+                }}
+                >
                   <div className="p-3 bg-primary bg-opacity-15 rounded-full">
                     <feature.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
                   <p className="text-lg text-gray-600 dark:text-gray-400 text-center">{feature.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -178,7 +230,22 @@ export default function MedicalDeviceLanding1080p() {
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
               Fitur &quot;Hopital Manage&quot;
             </h2>
-            <div className="text-xl text-gray-600 dark:text-gray-400">
+            <motion.div 
+            className="text-xl text-gray-600 dark:text-gray-400"
+            initial={{
+              opacity: 0,
+              
+            }}
+            whileInView={{
+              opacity: 1,
+              
+              transition:{
+                type: "spring",
+               
+                duration: 1
+              }
+            }}
+            >
               <p >
                 Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur &quot;Hospital Manage&quot; dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
               <br/><br/>
@@ -186,7 +253,7 @@ export default function MedicalDeviceLanding1080p() {
               <p className="text-sm text-black">
                 *fitur masih dalam tahap development
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
         <section className="w-full py-24 lg:py-32">
@@ -195,18 +262,53 @@ export default function MedicalDeviceLanding1080p() {
               Jasa Pembuatan Web Untuk Perusahaan Peralatan Kesehatan
             </h2>
             <div className="text-xl text-gray-600 dark:text-gray-400">
-              <p >
+              <motion.p
+              initial={{
+                opacity: 0,
+                
+              }}
+              whileInView={{
+                opacity: 1,
+                
+                transition:{
+                  type: "spring",
+                 
+                  duration: 1
+                }
+              }}
+              >
                 Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur &quot;Hospital Manage&quot; dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
-              <br/><br/>
-              </p>
+                <br/><br/>
+              </motion.p>
               <div>
-                <Image
-                  alt="Advanced Medical Device"
-                  className="mx-auto rounded-xl object-cover object-center "
-                  height="1100"
-                  src={dashboard}
-                  width="13000"
-                />
+                <motion.div
+                initial={{
+                  // opacity: 0.6,
+                  // scale:0.6,
+                  y:200
+                }}
+                whileInView={{
+                  // opacity: 1,
+                  // scale: 1,
+                  y:50,
+                  transition:{
+                    type: "spring",
+                    // bounce: 0.4,
+                    duration: 0.55
+                  }
+                }}
+                viewport={{
+                  once: true
+                }}
+                >
+                  <Image
+                    alt="Advanced Medical Device"
+                    className="mx-auto rounded-xl object-cover object-center "
+                    height="1100"
+                    src={dashboard}
+                    width="13000"
+                  />
+                </motion.div>
                 <br />
                 <p className="text-center text-sm">
                   *<span className="underline">Diatas merupakan contoh pembuatan sistem inventaris maintenance peralatan medis</span>
