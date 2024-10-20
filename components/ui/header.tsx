@@ -27,7 +27,7 @@ const Header = () => {
   <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 border-b">
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2.5">
       <Link className="flex items-center justify-center" href="/">
-         <span className="hape:ml-3 sm:ml-3 md:ml-3 lg:ml-6 xl:-ml-6 text-xl lg:text-2xl font-bold">CV Abadi Nusantara Entitas</span>
+         <span className="minihape:ml-3 hape:ml-3 sm:ml-3 md:ml-3 lg:ml-6 xl:-ml-6 text-xl lg:text-2xl font-bold">CV Abadi Nusantara Entitas</span>
       </Link>
 
       <button 
@@ -64,6 +64,7 @@ const Header = () => {
             href="products"
             className="
             text-base font-medium group-hover:w-full transition-all relative 
+            minihape:block minihape:text-gray-700 minihape:rounded minihape:hover:bg-gray-100 minihape:dark:text-gray-400 minihape:py-1 minihape:px-3
             hape:block hape:text-gray-700 hape:rounded hape:hover:bg-gray-100 hape:dark:text-gray-400 hape:py-2 hape:px-3 
             md:hover:bg-transparent md:inline lg:text-lg cursor-pointer md:ease-in-out md:before:transition-[width] md:before:ease-in-out md:before:duration-300 md:before:absolute md:before:bg-black md:before:origin-center md:before:h-[2px] md:before:w-0 md:hover:before:w-[50%] md:before:bottom-0 md:before:left-[50%] md:after:transition-[width] md:after:ease-in-out md:after:duration-300 md:after:absolute md:after:bg-black md:after:origin-center md:after:h-[2px] md:after:w-0 md:hover:after:w-[50%] md:after:bottom-0 md:after:right-[50%]"
             aria-current="page"
@@ -76,6 +77,7 @@ const Header = () => {
             href="hospitalManage"
             className="
             text-base font-medium group-hover:w-full transition-all relative 
+            minihape:block minihape:text-gray-700 minihape:rounded minihape:hover:bg-gray-100 minihape:dark:text-gray-400 minihape:py-1 minihape:px-3
             hape:block hape:text-gray-700 hape:rounded hape:hover:bg-gray-100 hape:dark:text-gray-400 hape:py-2 hape:px-3 
             md:hover:bg-transparent md:inline lg:text-lg cursor-pointer md:ease-in-out md:before:transition-[width] md:before:ease-in-out md:before:duration-300 md:before:absolute md:before:bg-black md:before:origin-center md:before:h-[2px] md:before:w-0 md:hover:before:w-[50%] md:before:bottom-0 md:before:left-[50%] md:after:transition-[width] md:after:ease-in-out md:after:duration-300 md:after:absolute md:after:bg-black md:after:origin-center md:after:h-[2px] md:after:w-0 md:hover:after:w-[50%] md:after:bottom-0 md:after:right-[50%]"
             aria-current="page"
@@ -88,6 +90,7 @@ const Header = () => {
             href="#contact"
             className="
             text-base font-medium group-hover:w-full transition-all relative 
+            minihape:block minihape:text-gray-700 minihape:rounded minihape:hover:bg-gray-100 minihape:dark:text-gray-400 minihape:py-1 minihape:px-3
             hape:block hape:text-gray-700 hape:rounded hape:hover:bg-gray-100 hape:dark:text-gray-400 hape:py-2 hape:px-3 
             md:hover:bg-transparent md:inline lg:text-lg cursor-pointer md:ease-in-out md:before:transition-[width] md:before:ease-in-out md:before:duration-300 md:before:absolute md:before:bg-black md:before:origin-center md:before:h-[2px] md:before:w-0 md:hover:before:w-[50%] md:before:bottom-0 md:before:left-[50%] md:after:transition-[width] md:after:ease-in-out md:after:duration-300 md:after:absolute md:after:bg-black md:after:origin-center md:after:h-[2px] md:after:w-0 md:hover:after:w-[50%] md:after:bottom-0 md:after:right-[50%]"
             aria-current="page"

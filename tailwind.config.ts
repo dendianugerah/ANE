@@ -57,7 +57,8 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		screens: {
-			'hape': '425px'
+			'hape': '425px',
+			'minihape' : '375px'
 		}
   	}
   },
