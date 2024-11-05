@@ -19,7 +19,7 @@ export default function MedicalDeviceLanding1080p() {
       <Header/>
       {/*bg-gradient-to-r from-blue-50 to-indigo-50*/}
       <main className="flex-1">
-        <section className="w-full py-24 lg:py-32 xl:py-48 bg-gray-100">
+        <section className="w-full minihape:py-8 lg:py-32 xl:py-48 bg-gray-100">
           <div className="container px-6 md:px-8 lg:px-16 mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="flex flex-col justify-center space-y-6">
@@ -68,7 +68,6 @@ export default function MedicalDeviceLanding1080p() {
             </h2>
             <div 
             className="grid gap-12 lg:grid-cols-3 text-center"
-            
             >
               {[
                 {
@@ -187,7 +186,7 @@ export default function MedicalDeviceLanding1080p() {
         <section className="w-full py-24 lg:py-32">
           <div className="container px-8 lg:px-16 mx-auto max-w-7xl">
             <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-center mb-16">
-              Trusted by Leading Healthcare Providers
+              Dipercaya oleh Penyedia Layanan Terkemuka
             </h2>
             <div className="grid gap-8 sm:grid-cols-3">
               {[
@@ -277,7 +276,9 @@ export default function MedicalDeviceLanding1080p() {
                 }
               }}
               >
-                Selain menjual sparepart peralatan kesehatan, ANE juga mempunyai fitur &quot;Hospital Manage&quot; dimana fitur tersebut sangat berguna untuk seorang elektromedis dalam melakukan preventif maintenance di Rumah Sakit.
+                Kalau kalian mencari tempat untuk pembuatan website, maka ANE cocok menjadi development website kalian
+                <br />
+                ini contohnya:
                 <br/><br/>
               </motion.p>
               <div>

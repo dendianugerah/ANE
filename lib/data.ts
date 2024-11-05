@@ -1,4 +1,4 @@
-import  prisma  from "@/lib/prisma"
+import prisma from "@/lib/prisma";
 
 export const getProducts = async () => {
     try {
@@ -6,8 +6,17 @@ export const getProducts = async () => {
 
         return Products;  
     } catch {
-        throw new Error("gagal fecth data")
+        throw new Error("gagal fecth data Product")
     }
 }
 
+export const getMaintenances = async () => {
+    try {
+        const Maintenances = await prisma.maintenance.findMany();
+
+        return Maintenances;
+    } catch (error) {
+        throw new Error("gagal fetch data maintenance")
+    }
+}
 

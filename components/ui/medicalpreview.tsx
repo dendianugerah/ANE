@@ -122,10 +122,10 @@ const SparePartCard = ({ product }:{ product: Products}) => {
           {/* <Tool className="mr-2 h-4 w-4" /> */}
           Details
         </Button>
-        <Link href={product.link}>
+        <Link href={`https://wa.me/+6281346440748?text=Saya ingin membeli product ${product.name}`}>
           <Button>
             <ShoppingCart className="mr-2 h-4 w-4" />
-            Buy in Shopee
+            Buy by WA
           </Button>
         </Link>
         

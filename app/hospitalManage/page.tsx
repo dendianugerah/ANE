@@ -2,9 +2,7 @@ const hopitalManage = () => {
     return (
         <div>
             <h2>
-                fitur masih dalam tahap persiapan 
-                <br />
-                mohon ditunggu
+                tes tes fitur 1 2 tes
             </h2>
         </div>
     )
