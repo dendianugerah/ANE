@@ -1,17 +1,17 @@
-import Maintenance from "@/app/fiturmaintenance/maintenance/page";
-import { getMaintenances } from "@/lib/data";
+// import Maintenance from "@/app/fiturmaintenance/maintenance/page";
+// import { getMaintenances } from "@/lib/data";
 
-const Page = async () => {
-    const maintenancesdb = await getMaintenances()
-    console.log("tes 1",maintenancesdb)
+// const Page = async () => {
+//     const maintenancesdb = await getMaintenances()
+//     console.log("tes 1",maintenancesdb)
 
-    return(
-        <div>
-            berikut merupakan contoh fitur maintenance
-            <Maintenance maintenancesdb={maintenancesdb}/>
-        </div>
-    )
-}
+//     return(
+//         <div>
+//             berikut merupakan contoh fitur maintenance
+//             <Maintenance maintenancesdb={maintenancesdb}/>
+//         </div>
+//     )
+// }
 
-export default Page;
+// export default Page;
 

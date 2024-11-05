@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import logowa2 from "@/img/logowa.jpg";
+// import logowa2 from "@/img/logowa.jpg";
 
 const Contact = () => {
   const [to, setTo] = useState("");
