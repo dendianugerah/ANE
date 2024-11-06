@@ -124,7 +124,7 @@ const SparePartCard = ({ product }:{ product: Products}) => {
         </Button>
         <Link href={`https://wa.me/+6282256692390?text=Halo salam kenal, saya ingin membeli product ${product.name}. Tolong beri tahu saya mengenai kelengkapan produk tersebut`}>
           <Button>
-            <ShoppingCart className="mr-2 h-4 w-4" />
+            <ShoppingCart className="mr-2 h-4 w-4"/>
             Buy by WA
           </Button>
         </Link>
