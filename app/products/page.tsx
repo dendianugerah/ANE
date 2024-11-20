@@ -1,17 +1,20 @@
 import Header from "@/components/ui/header";
 import MedicalSparePartsPreview from "@/components/ui/medicalpreview";
 import { getProducts } from "@/lib/data";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-export const dynamic = 'force-dynamic';
 
-const halaman = async () => {
-  const products = await getProducts();
+const queryClient = new QueryClient();
+
+const halaman = () => {
 
   return (
-    <div>
-      <Header/>
-      <MedicalSparePartsPreview products={products}/>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <Header />
+        <MedicalSparePartsPreview />
+      </div>
+    </QueryClientProvider>
   )
 }
 

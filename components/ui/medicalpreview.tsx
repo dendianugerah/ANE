@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ShoppingCart, Package } from "lucide-react"
 import Link from "next/link"
+import { useQuery } from "@tanstack/react-query";
 
 interface Products {
   id: string;
@@ -18,9 +19,28 @@ interface Products {
   link: string;
 }
 
-const MedicalSparePartsPreview = ({products}: {products: Products[]}) => {
-  if (!products || !Array.isArray(products)) {
-    return <p>No products available</p>;
+const fetchProducts = async (): Promise<Products[]> => {
+  const res = await fetch("/api/products");
+  if(!res.ok) throw new Error("Gagal fetch data api products");
+  const result = await res.json();
+  return result.data;
+}
+
+
+const MedicalSparePartsPreview = () => {
+  
+  const { data: products, isLoading, isError } = useQuery<Products[]>(["products"], fetchProducts)
+
+  if (isLoading) {
+    return <p>Loading data produk...</p>;
+  }
+  
+  if (isError) {
+    return <p>Terjadi kesalahan saat memuat data produk.</p>;
+  }
+
+  if (!products || products.length === 0) {
+    return <p>Produk tidak tersedia.</p>;
   }
 
   return (
