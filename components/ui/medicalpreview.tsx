@@ -30,9 +30,11 @@ const fetchProducts = async (): Promise<Products[]> => {
 const MedicalSparePartsPreview = () => {
   
   const { data: products, isLoading, isError } = useQuery<Products[]>({
-    queryKey : ["products"], 
-    queryFn : fetchProducts
-  })
+    queryKey: ["products"],
+    queryFn: fetchProducts,
+    refetchOnWindowFocus: true, // Refetch when the window regains focus
+    refetchOnMount: true, // Refetch when the component mounts
+  });
 
   if (isLoading) {
     return <p>Loading data produk...</p>;
