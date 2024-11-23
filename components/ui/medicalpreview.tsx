@@ -23,13 +23,16 @@ const fetchProducts = async (): Promise<Products[]> => {
   const res = await fetch("/api/products");
   if(!res.ok) throw new Error("Gagal fetch data api products");
   const result = await res.json();
-  return result.data;
+  return result;
 }
 
 
 const MedicalSparePartsPreview = () => {
   
-  const { data: products, isLoading, isError } = useQuery<Products[]>(["products"], fetchProducts)
+  const { data: products, isLoading, isError } = useQuery<Products[]>({
+    queryKey : ["products"], 
+    queryFn : fetchProducts
+  })
 
   if (isLoading) {
     return <p>Loading data produk...</p>;
