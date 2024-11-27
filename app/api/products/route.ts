@@ -1,17 +1,12 @@
-import { PrismaClient } from '@prisma/client';
+import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-const prisma = new PrismaClient();
-
-
-export async function GET(
-
-) {
-    try{
+export async function GET() {
+    try {
         const products = await prisma.products.findMany();
-        console.log("TestTEsttes", products)
-        return new NextResponse(JSON.stringify(products))
-    } catch (error){
-        return new NextResponse(JSON.stringify(error))
+        return NextResponse.json(products);
+    } catch (error: unknown) {
+        const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+        return NextResponse.json({ error: errorMessage }, { status: 500 });
     }
 }
