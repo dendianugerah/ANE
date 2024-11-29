@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ShoppingCart, Package } from "lucide-react"
 import Link from "next/link"
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 interface Products {
   id: string;
@@ -27,6 +27,7 @@ const fetchProducts = async (): Promise<Products[]> => {
   return await res.json();
 };
 
+const queryClient = new QueryClient();
 
 const MedicalSparePartsPreview = () => {
   
@@ -37,17 +38,12 @@ const MedicalSparePartsPreview = () => {
     refetchOnMount: true, // Refetch when the component mounts
   });
 
-  if (isLoading) {
-    return <p>Loading data produk...</p>;
-  }
-  
-  if (isError) {
-    return <p>Terjadi kesalahan saat memuat data produk.</p>;
-  }
+  if (isLoading) return <p>Loading data produk...</p>;
 
-  if (!products || products.length === 0) {
-    return <p>Produk tidak tersedia.</p>;
-  }
+  if (isError) return <p>Terjadi kesalahan saat memuat data produk.</p>;
+
+  if (!products || products.length === 0) return <p>Produk tidak tersedia.</p>;
+  
 
   return (
     <div className="container mx-auto px-4 py-6 ">
@@ -160,4 +156,10 @@ const SparePartCard = ({ product }:{ product: Products}) => {
   )
 }
 
-export default MedicalSparePartsPreview;
+export default function MedicalSparePart() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <MedicalSparePartsPreview />
+    </QueryClientProvider>
+  );
+}
