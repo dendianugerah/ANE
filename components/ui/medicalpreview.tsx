@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ShoppingCart, Package } from "lucide-react"
 import Link from "next/link"
-import { useQuery, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 interface Products {
   id: string;
@@ -27,7 +27,6 @@ const fetchProducts = async (): Promise<Products[]> => {
   return await res.json();
 };
 
-const queryClient = new QueryClient();
 
 const MedicalSparePartsPreview = () => {
   
@@ -156,10 +155,4 @@ const SparePartCard = ({ product }:{ product: Products}) => {
   )
 }
 
-export default function MedicalSparePart() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <MedicalSparePartsPreview />
-    </QueryClientProvider>
-  );
-}
+export default MedicalSparePartsPreview;

@@ -1,13 +1,18 @@
 "use client";
 
 import Header from "@/components/ui/header";
-import MedicalSparePart from "@/components/ui/medicalpreview";
+import MedicalSparePartsPreview from "@/components/ui/medicalpreview";
+import { QueryClientProvider, QueryClient} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const halaman = () => {
   return (
     <div>
       <Header />
-      <MedicalSparePart />
+      <QueryClientProvider client={queryClient}>
+          <MedicalSparePartsPreview />
+      </QueryClientProvider>
     </div>
   );
 };
