@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import type { Product } from "@/types/product";
 
 const fetchProducts = async (): Promise<Product[]> => {
