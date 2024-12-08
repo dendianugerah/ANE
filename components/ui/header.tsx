@@ -74,7 +74,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-            href="fiturbelumjadi"
+            href="hospital-manage"
             className="
             text-base font-medium group-hover:w-full transition-all relative 
             minihape:block minihape:text-gray-700 minihape:rounded minihape:hover:bg-gray-100 minihape:dark:text-gray-400 minihape:py-1.5 minihape:px-3

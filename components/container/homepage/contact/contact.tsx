@@ -4,34 +4,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
 import Image from "next/image";
-// import logowa2 from "@/img/logowa.jpg";
+import { useContactForm } from "@/hooks/useContactForm";
 
 const Contact = () => {
-  const [to, setTo] = useState("");
-  const [subject, setSubject] = useState("");
-  const [text, setText] = useState("");
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ to, subject, text }),
-    });
-
-    if (response.ok) {
-      alert("email berhasil terkirim!");
-      console.log("Email sent successfully!");
-    } else {
-      alert("email gagal terkirim");
-      console.error("Error sending email.");
-    }
-  };
+  const { formData, handleChange, handleSubmit } = useContactForm();
 
   return (
     <section
@@ -54,24 +31,27 @@ const Contact = () => {
             <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
               <Input
                 className="text-lg p-6"
-                value={to}
+                name="to"
+                value={formData.to}
                 placeholder="Masukkan Email"
                 type="email"
-                onChange={(e) => setTo(e.target.value)}
+                onChange={handleChange}
               />
               <Input
                 className="text-lg p-6"
-                value={subject}
+                name="subject"
+                value={formData.subject}
                 placeholder="Subject Email"
                 type="text"
-                onChange={(e) => setSubject(e.target.value)}
+                onChange={handleChange}
               />
               <Input
                 className="text-lg p-6"
-                value={text}
+                name="text"
+                value={formData.text}
                 placeholder="Pesanan Sparepart"
                 type="text"
-                onChange={(e) => setText(e.target.value)}
+                onChange={handleChange}
               />
               <Button type="submit" size="lg" className="text-lg px-8 py-6">
                 Kirim
@@ -93,13 +73,11 @@ const Contact = () => {
             <Button
               type="submit"
               size="lg"
-              className="
-            text-lg bg-green-500 text-white px-8 py-6
-            hover:bg-green-600 gap-2"
+              className="text-lg bg-green-500 text-white px-8 py-6 hover:bg-green-600 gap-2"
             >
               <Image
                 alt="Advanced Medical Device"
-                className="mx-auto rounded-xl object-cover object-center "
+                className="mx-auto rounded-xl object-cover object-center"
                 height="30"
                 src="/image/logowa2.png"
                 width="30"
