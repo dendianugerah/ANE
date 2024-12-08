@@ -35,6 +35,7 @@ const MedicalSparePartsPreview = () => {
     queryFn: fetchProducts,
     refetchOnWindowFocus: true, // Refetch when the window regains focus
     refetchOnMount: true, // Refetch when the component mounts
+    refetchInterval: 5000, //Polling setiap 5 detik
   });
 
   if (isLoading) return <p>Loading data produk...</p>;
