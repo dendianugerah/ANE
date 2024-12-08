@@ -1,16 +1,12 @@
-"use client";
-
 import Header from "@/components/ui/header";
 import MedicalSparePartsPreview from "@/components/container/homepage/product/medical-preview";
 
-const halaman = () => {
+export default function ProductsPage() {
   return (
     <div>
       <Header />
       <MedicalSparePartsPreview />
     </div>
   );
-};
-
-export default halaman;
+}
 

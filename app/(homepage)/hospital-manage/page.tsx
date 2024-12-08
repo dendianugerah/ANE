@@ -3,7 +3,7 @@
 import Header from "@/components/ui/header";
 import { Calendar, Hospital, Clock } from "lucide-react";
 
-const HospitalManage = () => {
+export default function HospitalManage() {
     return (
         <div>
             <Header />
@@ -38,5 +38,3 @@ const HospitalManage = () => {
         </div>
     );
 };
-
-export default HospitalManage;
